@@ -1,3 +1,127 @@
-<h1>Bookmarks</h1>
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+:root {
+  --light-gray-color: rgb(110, 118, 125);
+}
+body {
+  background-color: black;
+  margin: 0 16px 0 16px;
+  border: 1px solid lightgrey;
+  border-bottom: auto;
+  height: auto;
+  width: auto;
+}
+.wd-bookmarks-heading {
+  padding-left: 16px;
+  border-bottom: 1px solid gray;
+}
+.wd-title {
+  margin: 10px 0 2px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.wd-title-handle {
+  color: var(--light-gray-color);
+  font-size: 13px;
+  padding-bottom: 12px;
+}
+.wd-bookmark-avatar {
+  margin-top: 12px;
+  height: 48px;
+  border-radius: 50%;
+  width: 48px;
+}
+.wd-bookmark-article-container {
+  padding-left: 16px;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+}
 
-Page not ready yet.
+.wd-article-collection {
+  display: flex;
+  width: 600px;
+  border: 1px solid lightgrey;
+}
+
+.wd-bookmark-avatar-container {
+  margin-left: 16px;
+}
+.wd-article-container {
+  margin: 10px 0 0 10px;
+  border-bottom: 1px solid gray;
+}
+.wd-author-name {
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.wd-author-handle {
+  color: lightgray;
+  font-size: 15px;
+}
+.wd-read-more-top {
+  color: rgb(26, 145, 188);
+  float: right;
+  padding-right: 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wd-read-more {
+  color: var(--light-gray-color);
+  float: right;
+  padding-right: 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wd-article-content {
+  padding-top: 10px;
+  color: white;
+  font-size: 15px;
+  max-width: 506px;
+  margin-bottom: 12px;
+}
+
+.wd-article-img {
+  border-radius: 15px 15px 0 0;
+  border: 1px solid var(--light-gray-color);
+  border-bottom: none;
+  display: block;
+  height: 264px;
+  width: 504px;
+  object-fit: cover;
+}
+.wd-lightgray {
+  color: var(--light-gray-color);
+}
+.wd-article-content-special {
+  width: 99.6%;
+  padding: 12px;
+  border: 1px solid var(--light-gray-color);
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+}
+.wd-article-icons-group {
+  display: flex;
+  padding: 12px 10px 12px 10px;
+  justify-content: space-between;
+  width: 35%;
+}
+.wd-article-icons-group i {
+  color: var(--light-gray-color);
+  font-size: 13px;
+}
+.wd-article-icons-group .wd-liked {
+  color: red;
+}
+
+.wd-icon-space {
+  margin-right: 12px;
+}
