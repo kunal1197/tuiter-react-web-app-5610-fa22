@@ -42,7 +42,7 @@ body {
   padding-left: 16px;
   display: flex;
   border-bottom: 1px solid lightgrey;
-  display: flex;
+  display: grid;
 }
 
 .wd-article-collection {
@@ -53,10 +53,14 @@ body {
 
 .wd-bookmark-avatar-container {
   margin-left: 16px;
+  width: 48px;
+  float: left;
 }
 .wd-article-container {
-  margin: 10px 0 0 10px;
+  width: auto;
+  margin: 15px 0 0 15px;
   border-bottom: 1px solid gray;
+  padding-left: 65px;
 }
 .wd-author-name {
   color: white;
@@ -112,7 +116,7 @@ body {
   display: flex;
   padding: 12px 10px 12px 10px;
   justify-content: space-between;
-  width: 35%;
+  width: 37%;
 }
 .wd-article-icons-group i {
   color: var(--light-gray-color);
