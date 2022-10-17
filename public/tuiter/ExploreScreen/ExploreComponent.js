@@ -2,7 +2,7 @@ import PostSummaryList from "../PostSummaryList/index.js";
 
 const ExploreComponent = () => {
   return `
-            <!-- Search Box -->
+            <!-- Search Box and cog-->
 
             <div class="row">
                 <div class="col-10"
@@ -53,7 +53,7 @@ const ExploreComponent = () => {
               </span>
            </ul>
 
-           <!-- Image Container Section -->
+           <!-- Image Container Section with overlaid text -->
            
            <div class="row position-relative">
                 <div>
