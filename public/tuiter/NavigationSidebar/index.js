@@ -8,13 +8,13 @@ const NavigationSidebar = (active) => {
 
                     <a class="list-group-item ${
                       active === "Home" ? "active" : ""
-                    }" href="/tuiter/HomeScreen/home.html">
+                    }" href="/tuiter/HomeScreen/index.html">
                         <i class="fa fa-home"></i>
                         <span class="d-none d-xl-inline d-lg-none p-1"> Home</span>
                     </a>
                     <a class="list-group-item ${
                       active === "Explore" ? "active" : ""
-                    }" href="/tuiter/ExploreScreen/explore.html">
+                    }" href="/tuiter/ExploreScreen/index.html">
                         <i class="fa fa-hashtag"></i>
                         <span class="d-none d-xl-inline d-lg-none p-1"> Explore</span>
                     </a>
