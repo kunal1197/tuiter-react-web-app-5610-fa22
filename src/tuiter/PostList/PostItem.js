@@ -59,6 +59,7 @@ const PostItem = ({
                 height: "400px",
                 objectFit: "cover",
               }}
+              alt=""
             />
             {post.postContent ? (
               <div
