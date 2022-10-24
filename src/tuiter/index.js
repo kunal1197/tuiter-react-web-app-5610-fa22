@@ -1,11 +1,15 @@
 import React from "react";
 import HomeScreen from "./HomeScreen/HomeScreen";
-// import ExploreScreen from "./ExploreScreen/ExploreScreen";
+import { Routes, Route } from "react-router";
+import ExploreScreen from "./ExploreScreen/ExploreScreen";
 const Tuiter = () => {
   return (
     <>
-      <HomeScreen />
-      {/* <ExploreScreen /> */}
+      <Routes>
+        <Route index element={<HomeScreen />} />
+        <Route path="/home" element={<HomeScreen />} />
+        <Route path="/explore" element={<ExploreScreen />} />
+      </Routes>
     </>
   );
 };

@@ -4,8 +4,8 @@
     "userName": "elonmusk",
     "time": "23h",
     "title": "Amazing show about <a href='#'>@inspiration4x</a> mission!",
-    "avatarImage": "../../../public/tuiter/images/elon_musk.jpeg",
-    "postImageUrl": "../../../public/tuiter/images/astronaut.jpeg",
+    "avatarImage": "/tuiter/images/elon_musk.jpeg",
+    "postImageUrl": "/tuiter/images/astronaut.jpeg",
     "postContent": {
       "postHeading": "Countdown: Inspirational Mission to Space | Netflix Official site",
       "postContent": "From training to launch to landing, this all-access docuseries rides along with the Inpiration4 crew on the first all-civilian orbital space ...",
@@ -20,8 +20,8 @@
     "userName": "nypost",
     "time": "23h",
     "title": "Grimes reading Karl Marx following split with world's reichest man Elon musk <a href='#'>trib.al/nx2Gfaq</a>",
-    "avatarImage": "../../../public/tuiter/images/new_york_post.jpeg",
-    "postImageUrl": "../../../public/tuiter/images/book_read.jpeg",
+    "avatarImage": "/tuiter/images/new_york_post.jpeg",
+    "postImageUrl": "/tuiter/images/book_read.jpeg",
     "numberOfComments": "965",
     "numberOfRetweets": "2.4k",
     "numberOfLikes": "4k"

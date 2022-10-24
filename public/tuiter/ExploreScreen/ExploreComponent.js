@@ -58,7 +58,7 @@ const ExploreComponent = () => {
            <div class="row position-relative">
                 <div>
                     <img style="width: 100%; height: 100%; padding: none;" 
-                         src="../images/starship.jpeg" alt="SpaceX Ship" />
+                         src="/images/starship.jpeg" alt="SpaceX Ship" />
                 </div>
                 <div class="position-absolute bottom-0 start-0 ps-3">
                     <h2 class="">SpaceX's Starship</h2>

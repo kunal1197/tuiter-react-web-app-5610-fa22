@@ -4,7 +4,7 @@ const NavigationSidebar = ({ active = "explore" }) => {
   return (
     <div className="list-group">
       <Link to="/tuiter" className="list-group-item">
-        <i className="fab fa-twitter"></i>
+        <i className="fa fa-twitter"></i>
       </Link>
       <Link
         className={`list-group-item
@@ -67,7 +67,7 @@ const NavigationSidebar = ({ active = "explore" }) => {
         ${active === "More" ? "active" : ""}`}
         to="/"
       >
-        <i className="fas fa-circle"></i>
+        <i className="fa fa-circle"></i>
         <span className="d-none d-xl-inline d-lg-none p-1"> More</span>
       </Link>
       <div className="d-grid mt-2">

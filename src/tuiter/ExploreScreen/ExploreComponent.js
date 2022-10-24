@@ -82,7 +82,7 @@ const ExploreComponent = () => {
         <div>
           <img
             style={{ width: "100%", height: "100%", padding: "none" }}
-            src="../../../public/tuiter/images/starship.jpeg"
+            src="/tuiter/images/starship.jpeg"
             alt="SpaceX Ship"
           />
         </div>

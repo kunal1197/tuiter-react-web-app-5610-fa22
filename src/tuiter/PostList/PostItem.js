@@ -5,8 +5,8 @@ const PostItem = ({
     userName: "elonmusk",
     time: "23h",
     title: "Amazing show about <a href='#'>@inspiration4x</a> mission!",
-    avatarImage: "../../../public/tuiter/images/elon_musk.jpeg",
-    postImageUrl: "../../../public/tuiter/images/atronauts.jpeg",
+    avatarImage: "/tuiter/images/elon_musk.jpeg",
+    postImageUrl: "/tuiter/images/atronauts.jpeg",
     postContent: {
       postHeading:
         "Countdown: Inspirational Mission to Space | Netflix Official site",

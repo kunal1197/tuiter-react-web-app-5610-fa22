@@ -2,7 +2,7 @@ const NavigationSidebar = (active) => {
   return `
                 <div class="list-group">
                     <a class="list-group-item" href="/public/tuiter">
-                        <i class="fab fa-twitter"></i> </a>
+                        <i class="fa fa-twitter"></i> </a>
 
                 <!-- continuing with the rest of the list -->
 
@@ -52,7 +52,7 @@ const NavigationSidebar = (active) => {
                     <a class="list-group-item ${
                       active === "More" ? "active" : ""
                     }" href="/">
-                        <i class="fas fa-circle"></i>
+                        <i class="fa fa-circle"></i>
                         <span class="d-none d-xl-inline d-lg-none p-1"> More</span>
                     </a>
                 </div>
