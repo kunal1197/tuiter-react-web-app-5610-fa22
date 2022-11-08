@@ -4,9 +4,13 @@ import "./vendors/bootstrap/bootstrap.min.css";
 import "./vendors/fontawesome/css/font-awesome.min.css";
 import Labs from "./labs";
 import HelloWorld from "./labs/a6/hello-world";
-import Tuiter from "./tuiter";
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router";
+import Tuiter from "./tuiter/index.js";
+import ExploreScreen from "./tuiter/ExploreScreen/ExploreScreen";
+import HomeScreen from "./tuiter/HomeScreen";
+import ProfileScreen from "./tuiter/ProfileScreen";
+import EditProfileScreen from "./tuiter/ProfileScreen/EditProfileScreen";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +18,12 @@ function App() {
         <Routes>
           <Route path="/*" element={<Labs />} />
           <Route path="/hello" element={<HelloWorld />} />
-          <Route path="/tuiter/*" element={<Tuiter />} />
+          <Route path="/tuiter/" element={<Tuiter />}>
+            <Route index element={<HomeScreen />} />
+            <Route path="explore" element={<ExploreScreen />} />
+            <Route path="profile" element={<ProfileScreen />} />
+            <Route path="edit-profile" element={<EditProfileScreen />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

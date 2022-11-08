@@ -9,7 +9,6 @@ const PostList = () => {
         console.log(post);
         return <PostItem post={post} />;
       })}
-      {/* {console.log(Posts)} */}
     </ul>
   );
 };
