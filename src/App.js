@@ -5,10 +5,10 @@ import "./vendors/fontawesome/css/font-awesome.min.css";
 import Labs from "./labs";
 import HelloWorld from "./labs/a6/hello-world";
 import Tuiter from "./tuiter/index.js";
-import ExploreScreen from "./tuiter/ExploreScreen/ExploreScreen";
-import HomeScreen from "./tuiter/HomeScreen";
-import ProfileScreen from "./tuiter/ProfileScreen";
-import EditProfileScreen from "./tuiter/ProfileScreen/EditProfileScreen";
+import ExploreScreen from "./tuiter/explore/ExploreScreen";
+import HomeScreen from "./tuiter/home";
+import ProfileScreen from "./tuiter/profile";
+import EditProfileScreen from "./tuiter/profile/EditProfileScreen";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

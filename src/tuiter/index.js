@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import NavigationSidebar from "./NavigationSidebar";
-import WhoToFollowList from "./WhoToFollowList";
+import NavigationSidebar from "./navigation-sidebar";
+import WhoToFollowList from "./who-to-follow-list";
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
 import profileReducer from "./reducers/profile-reducer";

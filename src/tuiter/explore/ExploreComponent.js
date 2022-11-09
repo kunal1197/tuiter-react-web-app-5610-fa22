@@ -1,7 +1,7 @@
-import PostList from "../PostList/index.js";
+import PostSummaryList from "../post-summary-list/index.js";
 import React from "react";
 
-const HomeComponent = () => {
+const ExploreComponent = () => {
   return (
     <>
       <div className="row">
@@ -78,8 +78,20 @@ const HomeComponent = () => {
           </a>
         </span>
       </ul>
-      <PostList />
+      <div className="row position-relative">
+        <div>
+          <img
+            style={{ width: "100%", height: "100%", padding: "none" }}
+            src="/tuiter/images/starship.jpeg"
+            alt="SpaceX Ship"
+          />
+        </div>
+        <div className="position-absolute bottom-0 start-0 ps-3">
+          <h2 className="">SpaceX's Starship</h2>
+        </div>
+      </div>
+      <PostSummaryList />
     </>
   );
 };
-export default HomeComponent;
+export default ExploreComponent;

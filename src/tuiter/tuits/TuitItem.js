@@ -1,5 +1,5 @@
 import React from "react";
-import TuitStats from "./tuit-stats";
+import TuitStats from "./TuitStats";
 import { useDispatch } from "react-redux";
 
 const TuitListItem = ({ tuit }) => {
