@@ -1,12 +1,13 @@
 import { useDispatch } from "react-redux";
+import { likeTuit } from "../reducers/tuits-reducer";
 
 const TuitStats = ({ tuit }) => {
   const dispatch = useDispatch();
-  const likeTuit = () => {
-    dispatch({ type: "like-tuit", tuit });
+  const handleLikeTuit = () => {
+    dispatch(likeTuit(tuit));
   };
   return (
-    <div style={{ color: "#FAF9F6" }} onClick={likeTuit}>
+    <div style={{ color: "#FAF9F6" }} onClick={handleLikeTuit}>
       {tuit.liked && (
         <i className="fa fa-heart me-1" style={{ color: "red" }}></i>
       )}

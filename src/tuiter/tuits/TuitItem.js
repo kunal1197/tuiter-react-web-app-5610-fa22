@@ -1,11 +1,12 @@
 import React from "react";
 import TuitStats from "./TuitStats";
+import { deleteTuit } from "../reducers/tuits-reducer";
 import { useDispatch } from "react-redux";
 
 const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
-  const deleteTuit = (tuit) => {
-    dispatch({ type: "delete-tuit", tuit });
+  const handleDeleteTuit = (tuit) => {
+    dispatch(deleteTuit(tuit));
   };
 
   return (
@@ -42,7 +43,7 @@ const TuitListItem = ({ tuit }) => {
             &nbsp;
             <span className="text-muted">@{tuit.handle}</span>
             <i
-              onClick={() => deleteTuit(tuit)}
+              onClick={() => handleDeleteTuit(tuit)}
               className="fa fa-remove fa 
                   fa-pull-right"
             ></i>

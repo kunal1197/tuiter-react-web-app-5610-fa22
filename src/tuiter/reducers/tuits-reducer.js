@@ -1,5 +1,5 @@
-// import tuits from "../data/tuits.json";
-// import { createSlice } from "@reduxjs/toolkit";
+import tuits from "../data/tuits.json";
+import { createSlice } from "@reduxjs/toolkit";
 
 // const currentUser = {
 //   userName: "NASA",
@@ -7,77 +7,57 @@
 //   avatarIcon: "nasa_logo.png",
 // };
 
-// const templateTuit = {
-//   ...currentUser,
-//   topic: "Space",
-//   time: "2h",
-//   liked: false,
-//   replies: 0,
-//   retuits: 0,
-//   likes: 0,
-// };
-
-// const tuitsSlice = createSlice({
-//   name: "tuits",
-//   initialState: tuits,
-//   reducers: {
-//     createTuit(state, action) {
-//       state.unshift({
-//         ...action.payload,
-//         ...templateTuit,
-//         _id: new Date().getTime(),
-//       });
-//       console.log("templateTuit", templateTuit);
-//     },
-
-//     deleteTuit(state, action) {
-//       const index = state.findIndex((tuit) => tuit._id === action.payload);
-//       state.splice(index, 1);
-//     },
-//   },
-// });
-// export const { createTuit, deleteTuit } = tuitsSlice.actions;
-// export default tuitsSlice.reducer;
-
-import tuits from "../data/tuits.json";
-
-const tuitsReducer = (state = tuits, action) => {
-  switch (action.type) {
-    case "create-tuit":
-      const newTuit = {
-        tuit: action.tuit,
-        _id: new Date().getTime() + "",
-        postedBy: {
-          username: "ReactJS",
-        },
-        stats: {
-          retuits: 111,
-          likes: 222,
-          replies: 333,
-        },
-      };
-      return [newTuit, ...state];
-    case "delete-tuit":
-      return state.filter((tuit) => tuit._id !== action.tuit._id);
-    case "like-tuit":
-      return state.map((tuit) => {
-        if (tuit._id === action.tuit._id) {
-          if (tuit.liked === true) {
-            tuit.liked = false;
-            tuit.stats.likes--;
-          } else {
-            tuit.liked = true;
-            tuit.stats.likes++;
-          }
-          return tuit;
-        } else {
-          return tuit;
-        }
-      });
-
-    default:
-      return tuits;
-  }
+const templateTuit = {
+  postedBy: {
+    username: "NASA",
+  },
+  verified: false,
+  handle: "@nasa",
+  tuit: "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
+  logoImage: "/tuiter/images/elon_musk.jpeg",
+  avatarImage: "/tuiter/images/elon_musk.jpeg",
+  tuits: "122K",
+  stats: {
+    comments: 123,
+    retuits: 432,
+    likes: 2345,
+  },
+  topic: "Space",
+  time: "2h",
+  liked: false,
+  replies: 0,
+  retuits: 0,
+  likes: 0,
 };
 
-export default tuitsReducer;
+const tuitsSlice = createSlice({
+  name: "tuits",
+  initialState: tuits,
+  reducers: {
+    createTuit(state, action) {
+      state.unshift({
+        ...templateTuit,
+        ...action.payload,
+        _id: new Date().getTime(),
+      });
+    },
+
+    deleteTuit(state, action) {
+      const index = state.findIndex((tuit) => tuit._id === action.payload);
+      state.splice(index, 1);
+    },
+
+    likeTuit(state, action) {
+      const post = state.find((post) => post._id === action.payload._id);
+      post.liked = !post.liked;
+
+      if (post.liked) {
+        post.stats.likes++;
+      } else {
+        post.stats.likes--;
+      }
+    },
+  },
+});
+export const { createTuit, deleteTuit, likeTuit } = tuitsSlice.actions;
+export default tuitsSlice.reducer;
