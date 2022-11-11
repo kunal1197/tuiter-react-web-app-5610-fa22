@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { createTuit } from "../reducers/tuits-reducer";
 const WhatsHappening = () => {
   const dispatch = useDispatch();
   const [whatsHappening, setWhatsHappening] = useState("");
   const tuitClickHandler = () => {
     dispatch({ type: "create-tuit", tuit: whatsHappening });
+    //   const newTuit = {
+    //     tuit: whatsHappening
+    // }
+    // dispatch(createTuit(newTuit));
   };
   return (
     <div className="row">

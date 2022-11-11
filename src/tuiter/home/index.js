@@ -4,6 +4,7 @@ import WhatsHappening from "./whats-happening";
 const HomeScreen = () => {
   return (
     <div>
+      <h3>Home</h3>
       <WhatsHappening />
       <TuitList />
     </div>
