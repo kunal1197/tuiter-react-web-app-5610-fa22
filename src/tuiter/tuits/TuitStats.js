@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { likeTuit } from "../reducers/tuits-reducer";
+// import { likeTuit } from "../reducers/tuits-reducer";
 import { updateTuitThunk } from "../../services/tuits-thunks";
 
 const TuitStats = ({ tuit }) => {
