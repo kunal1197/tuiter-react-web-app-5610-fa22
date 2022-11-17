@@ -18,7 +18,7 @@ import { Provider } from "react-redux";
 
 const store = configureStore({
   reducer: {
-    tuits: tuitsReducer,
+    tuitsData: tuitsReducer,
     profile: profileReducer,
     who: whoReducer,
   },
