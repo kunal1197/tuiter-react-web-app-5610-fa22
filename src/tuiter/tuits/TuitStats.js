@@ -15,19 +15,19 @@ const TuitStats = ({ tuit }) => {
     //   {!tuit.liked && <i className="fa fa-heart me-1"></i>}
     //   {tuit.stats && tuit.stats.likes}
     // </div>
+
     <>
-      <div style={{ color: "#FAF9F6" }}>
-        Likes: {tuit.stats.likes}
-        <i
-          onClick={() =>
-            dispatch(
-              updateTuitThunk({
-                ...tuit,
-                likes: tuit.stats.likes + 1,
-              })
-            )
-          }
-        ></i>
+      <div
+        style={{ color: "#FAF9F6" }}
+        onClick={() =>
+          dispatch(
+            updateTuitThunk({
+              ...tuit,
+              likes: tuit.stats.likes + 1,
+            })
+          )
+        }
+      >
         {tuit.liked && (
           <i className="fa fa-thumbs-up me-1" style={{ color: "red" }}></i>
         )}
@@ -37,20 +37,22 @@ const TuitStats = ({ tuit }) => {
         {tuit.stats && tuit.stats.likes}
       </div>
 
-      <div style={{ color: "#FAF9F6" }}>
-        Dislikes: {tuit.stats.dislikes}
-        <i
-          onClick={() =>
-            dispatch(
-              updateTuitThunk({
-                ...tuit,
-                dislikes: tuit.stats.dislikes + 1,
-              })
-            )
-          }
-        ></i>
+      <div
+        style={{ color: "#FAF9F6" }}
+        onClick={() =>
+          dispatch(
+            updateTuitThunk({
+              ...tuit,
+              dislikes: tuit.stats.dislikes + 1,
+            })
+          )
+        }
+      >
         {tuit.disliked && (
-          <i className="fa fa-thumbs-down me-1" style={{ color: "red" }}></i>
+          <i
+            className="fa fa-thumbs-down me-1"
+            style={{ color: "aquamarine" }}
+          ></i>
         )}
         {(!tuit.disliked || tuit.stats.dislikes === 0) && (
           <i className="fa fa-thumbs-down me-1"></i>

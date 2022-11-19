@@ -7,6 +7,7 @@ import { deleteTuitThunk } from "../../services/tuits-thunks";
 const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
   const handleDeleteTuit = (tuit) => {
+    console.log("delete tuit", tuit);
     dispatch(deleteTuitThunk(tuit));
   };
 
@@ -42,7 +43,7 @@ const TuitListItem = ({ tuit }) => {
               )}
             </span>{" "}
             &nbsp;
-            <span className="text-muted">@{tuit.handle}</span>
+            <span className="text-muted">{tuit.handle}</span>
             <i
               onClick={() => handleDeleteTuit(tuit)}
               className="fa fa-remove fa 

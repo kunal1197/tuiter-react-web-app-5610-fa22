@@ -24,6 +24,10 @@ const store = configureStore({
   },
 });
 
+store.subscribe(() => {
+  console.log("store changed", store.getState());
+});
+
 const Tuiter = () => {
   return (
     <Provider store={store}>
