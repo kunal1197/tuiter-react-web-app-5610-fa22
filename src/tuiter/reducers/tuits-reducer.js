@@ -29,16 +29,19 @@ const templateTuit = {
   avatarImage: "/tuiter/images/elon_musk.jpeg",
   tuits: "122K",
   stats: {
-    comments: 123,
-    retuits: 432,
-    likes: 2345,
+    comments: 0,
+    retuits: 0,
+    likes: 0,
+    dislikes: 0,
   },
   topic: "Space",
   time: "2h",
   liked: false,
+  disliked: false,
   replies: 0,
   retuits: 0,
   likes: 0,
+  dislikes: 0,
 };
 
 // const tuitsSlice = createSlice({
@@ -91,6 +94,7 @@ const tuitsSlice = createSlice({
       state.tuits = state.tuits.filter((t) => t._id !== payload._id);
     },
     [createTuitThunk.fulfilled]: (state, { payload }) => {
+      console.log("createTuitThunk.fulfilled", payload);
       state.loading = false;
       state.tuits.push(payload);
     },
