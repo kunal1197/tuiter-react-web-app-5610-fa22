@@ -25,7 +25,7 @@ const store = configureStore({
 });
 
 store.subscribe(() => {
-  console.log("store changed", store.getState());
+  // console.log("store changed", store.getState());
 });
 
 const Tuiter = () => {

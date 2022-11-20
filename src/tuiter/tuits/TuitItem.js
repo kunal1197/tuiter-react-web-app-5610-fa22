@@ -7,9 +7,10 @@ import { deleteTuitThunk } from "../../services/tuits-thunks";
 const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
   const handleDeleteTuit = (tuit) => {
-    console.log("delete tuit", tuit);
     dispatch(deleteTuitThunk(tuit));
   };
+
+  console.log("tuit render", tuit);
 
   return (
     <li

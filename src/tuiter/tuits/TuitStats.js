@@ -7,6 +7,7 @@ const TuitStats = ({ tuit }) => {
   // const handleLikeTuit = () => {
   //   dispatch(likeTuit(tuit));
   // };
+
   return (
     // <div style={{ color: "#FAF9F6" }} onClick={handleLikeTuit}>
     //   {tuit.liked && (
@@ -23,7 +24,12 @@ const TuitStats = ({ tuit }) => {
           dispatch(
             updateTuitThunk({
               ...tuit,
-              likes: tuit.stats.likes + 1,
+              liked: !tuit.liked,
+              likes: tuit.liked ? tuit.likes - 1 : tuit.likes + 1,
+              stats: {
+                ...tuit.stats,
+                likes: tuit.liked ? tuit.stats.likes - 1 : tuit.stats.likes + 1,
+              },
             })
           )
         }
@@ -43,7 +49,14 @@ const TuitStats = ({ tuit }) => {
           dispatch(
             updateTuitThunk({
               ...tuit,
-              dislikes: tuit.stats.dislikes + 1,
+              disliked: !tuit.disliked,
+              dislikes: tuit.disliked ? tuit.dislikes - 1 : tuit.dislikes + 1,
+              stats: {
+                ...tuit.stats,
+                dislikes: tuit.disliked
+                  ? tuit.stats.dislikes - 1
+                  : tuit.stats.dislikes + 1,
+              },
             })
           )
         }
